@@ -1,0 +1,30 @@
+.user-link-wrapper {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  margin-top: 1.5vh;
+  height: 7vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8vw;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+
+  &:hover {
+    height: 7.5vh;
+    right: 4.8%;
+    margin-top: 1.3vh;
+    img {
+      width: 80px;
+    }
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+}

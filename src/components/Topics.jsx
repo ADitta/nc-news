@@ -1,0 +1,32 @@
+import { useEffect, useState } from "react";
+import { getTopics } from "../utils/utils";
+
+const Topics = ({ setSelectedTopic }) => {
+  const [topics, setTopics] = useState([]);
+  useEffect(() => {
+    getTopics().then((res) => {
+      setTopics(res);
+    });
+  }, []);
+
+  const handleChange = (e) => {
+    setSelectedTopic(e.target.value);
+  };
+
+  return (
+    <div className="topic">
+      <select onChange={handleChange} name="" id="">
+        <option value="">All</option>
+        {topics.map((topic) => {
+          return (
+            <option key={topic.slug} value={topic.slug}>
+              {topic.slug}
+            </option>
+          );
+        })}
+      </select>
+    </div>
+  );
+};
+
+export default Topics;
