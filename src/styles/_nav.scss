@@ -4,7 +4,7 @@ nav {
 }
 .nav-wrapper {
   min-height: 8vh;
-  margin-left: 5vw;
+  margin-left: 13vw;
   width: 25vw;
   display: flex;
   align-items: center;
@@ -12,7 +12,14 @@ nav {
 
   #home,
   #log-out {
+    // height: 3rem;
     transition: 1s all ease;
     @include custom-button();
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .nav-wrapper {
+    width: 15rem;
   }
 }

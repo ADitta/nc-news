@@ -11,21 +11,21 @@ body {
 }
 
 // Variables
-$shadow: 1px 1px 3px 3px
+$shadow: 1px 1px 2px 2px
     rgba(
-      $color: #4b82ca,
-      $alpha: 0.4,
+      $color: #ffffff,
+      $alpha: 0.2,
     ),
-  1px 1px 10px 5px
+  1px 1px 5px 3px
     rgba(
-      $color: #3483b8,
+      $color: #b8cfdf,
       $alpha: 0.3,
     );
 $title: "Roboto Mono", monospace;
 
 @mixin custom-button {
-  padding-top: 1.5vh;
-  padding-bottom: 1.5vh;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   min-width: 5.5rem;
   min-height: 1.5rem;
   text-align: center;
@@ -34,7 +34,7 @@ $title: "Roboto Mono", monospace;
   margin: 0.5rem 0;
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: 1px solid black;
   transition: 0.3s all ease;
 
@@ -80,7 +80,14 @@ header {
   }
 }
 
+.loading {
+  font-size: 5rem;
+  color: white;
+}
+
 @import "./login";
 @import "./articles";
 @import "./user";
 @import "./nav";
+@import "./register";
+@import "./articlesCard";

@@ -1,30 +1,74 @@
+// user icon in top right
 .user-link-wrapper {
   position: absolute;
   top: 0;
-  right: 5%;
-  margin-top: 1.5vh;
-  height: 7vh;
+  right: 15%;
+  margin-top: 2vh;
+  height: 4rem;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 8vw;
+  width: 4rem;
   overflow: hidden;
   border-radius: 50%;
   transition: all 0.2s ease;
 
   &:hover {
-    height: 7.5vh;
-    right: 4.8%;
+    height: 4.5rem;
+    width: 4.5rem;
     margin-top: 1.3vh;
+    right: 14%;
+    border: 2px solid rgb(9, 205, 231);
     img {
-      width: 80px;
+      width: 70px;
     }
   }
 
   img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+  }
+}
+
+// user detail page
+.user-profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80vw;
+  align-items: center;
+  margin: auto;
+  min-height: 60vh;
+  .info {
+    h1 {
+      margin-bottom: 1rem;
+      color: white;
+    }
+  }
+}
+
+.user-profile-img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .user-link-wrapper {
+    right: 5%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .user-link-wrapper {
+    right: 0%;
+    margin-top: 1.5vh;
   }
 }

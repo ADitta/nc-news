@@ -10,6 +10,7 @@
   border-radius: 1rem;
   padding: 3rem 0rem 2rem 0rem;
   box-shadow: $shadow;
+
   h1 {
     margin-top: 1rem;
   }
@@ -27,6 +28,9 @@
     width: 100%;
     padding: 0.5rem 2rem;
     border-radius: 0.6rem;
+    &::placeholder {
+      font-size: 0.8rem;
+    }
   }
 
   #login {
@@ -45,6 +49,25 @@
       color: rgb(211, 175, 175);
       background: linear-gradient(250deg, rgb(182, 32, 32), rgb(59, 28, 28));
       border: 1px solid rgb(255, 249, 249);
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .login-container {
+    width: 32rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .login-container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .login-container {
+    input {
+      width: 80%;
+      margin-left: 1.5rem;
     }
   }
 }

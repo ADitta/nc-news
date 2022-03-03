@@ -11,16 +11,20 @@ const PageCount = ({ selectedTopic, currentPage, setCurrentPage }) => {
 
   const pageNumHandler = (event, num) => {
     event.preventDefault();
-    setCurrentPage(num);
+    setCurrentPage((currentValue) => ({ ...currentValue, page: num }));
     window.scroll(0, 0);
   };
 
   return (
-    <div>
+    <div className="page-count">
       {Array.from({ length: currentPage.maxPage }, (v, i) => i + 1).map(
         (num) => {
           return (
-            <button key={num} onClick={(event) => pageNumHandler(event, num)}>
+            <button
+              className={currentPage.page === num ? "selected" : ""}
+              key={num}
+              onClick={(event) => pageNumHandler(event, num)}
+            >
               <a href="">{num}</a>
             </button>
           );

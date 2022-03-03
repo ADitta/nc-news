@@ -15,7 +15,7 @@ const Topics = ({ setSelectedTopic }) => {
 
   return (
     <div className="topic">
-      <select onChange={handleChange} name="" id="">
+      <select onChange={handleChange} name="" id="topic">
         <option value="">All</option>
         {topics.map((topic) => {
           return (

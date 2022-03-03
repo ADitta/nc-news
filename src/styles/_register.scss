@@ -1,0 +1,13 @@
+.register {
+  button {
+    @include custom-button;
+  }
+  form {
+    input {
+      margin-bottom: 1rem;
+      &::placeholder {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
