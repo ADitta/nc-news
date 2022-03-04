@@ -19,7 +19,13 @@ const Login = () => {
 
       <form onSubmit={loginHandler}>
         <label htmlFor="">
-          <input placeholder="Enter username" type="text" id="user" required />
+          <input
+            placeholder="Enter username"
+            value="tickle122"
+            type="text"
+            id="user"
+            required
+          />
         </label>
         <button id="login">Login</button>
       </form>
