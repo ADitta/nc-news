@@ -23,7 +23,7 @@ const Votes = ({ votes, component_name, component_id }) => {
   const votesHandlerDecrease = () => {
     if (changeAmount > votes - 1) {
       setVotesChanged((currVotes) => currVotes - 1);
-      patchComponentsVotesIncrease(component_name, component_id);
+      patchComponentsVotesDecrease(component_name, component_id);
       setChangeAmount((currentAmount) => currentAmount - 1);
     }
   };

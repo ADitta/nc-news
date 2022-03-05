@@ -2,11 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
-
+import { useNavigate } from "react-router-dom";
 const Nav = () => {
+  let navigate = useNavigate();
+  const changePath = (path) => {
+    navigate(path);
+  };
   const { loggedInUser, setLoggedInUser } = useContext(UserContext);
   const logoutHandler = () => {
+    localStorage.removeItem("loggedUser");
     setLoggedInUser({});
+    changePath("/");
   };
   return (
     <nav>

@@ -10,7 +10,12 @@ const Login = () => {
   const loginHandler = (event) => {
     event.preventDefault();
     getUser(event.target.user.value).then((res) => {
-      setLoggedInUser(res);
+      if (res) {
+        setLoggedInUser(res);
+        localStorage.setItem("loggedUser", JSON.stringify(res));
+      } else {
+        event.target.username.value = "";
+      }
     });
   };
   return (

@@ -23,3 +23,10 @@ nav {
     width: 15rem;
   }
 }
+@media screen and (max-width: 750px) {
+  .nav-wrapper {
+    margin-top: 1rem;
+    justify-content: space-around;
+    width: 70vw;
+  }
+}

@@ -19,9 +19,14 @@ export const getArticles = (topic, sort_by, order_by, p) => {
     });
 };
 export const getUser = (username) => {
-  return newsApi.get(`/users/${username}`).then((res) => {
-    return res.data.user;
-  });
+  return newsApi
+    .get(`/users/${username}`)
+    .then((res) => {
+      return res.data.user;
+    })
+    .catch(() => {
+      alert("Invalid username, please try again");
+    });
 };
 
 export const getArticleById = (article_id) => {
