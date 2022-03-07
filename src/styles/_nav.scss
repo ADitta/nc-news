@@ -15,6 +15,7 @@ nav {
     // height: 3rem;
     transition: 1s all ease;
     @include custom-button();
+    margin: 0.5rem 0rem;
   }
 }
 

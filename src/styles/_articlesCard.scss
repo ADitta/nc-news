@@ -71,6 +71,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  h2 {
+    margin-bottom: 1rem;
+  }
 }
 
 .create-comment {
@@ -107,5 +110,27 @@
 @media screen and (min-width: 900px) {
   .each-article-container {
     width: 40rem;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .titles {
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+    }
+  }
+  .comments-wrapper {
+    width: 100%;
+  }
+  .each-article-container {
+    margin-top: 2rem;
+    padding: 1rem 0.5rem;
+    max-width: 95%;
+  }
+  .each-comment {
+    margin-left: 0.2rem;
   }
 }
