@@ -6,7 +6,7 @@ const Register = () => {
   const { loggedInUser, SetLoggedInUser } = useContext(UserContext);
   return (
     <div className="login-container register">
-      <h1>Sign in</h1>
+      <h1>Register</h1>
       <form className="registerContainer" action="">
         <input type="text" placeholder="Please enter your username" />
         <input type="text" placeholder="Please enter your name" />
