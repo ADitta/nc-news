@@ -31,7 +31,6 @@ const Votes = ({ votes, component_name, component_id }) => {
   return (
     <div className="votes-wrapper">
       <button className="upvote" onClick={votesHandlerIncrease}>
-        {" "}
         <FontAwesomeIcon size="lg" icon={faThumbsUp} />
       </button>
       <a> Votes: {votes + votesChange}</a>
